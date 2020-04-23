@@ -26,10 +26,15 @@ h1 {
   margin-bottom: 35px;
 }
 
+p {
+  font-weight: 500;
+}
+
 .call-to-action {
   background-color: blue;
   padding: 1em;
   border-radius: var(--corner-radius);
+  margin: 25px 0;
 }
 
 form {
