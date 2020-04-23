@@ -5,8 +5,21 @@
 const form = document.querySelector("form");
 form.setAttribute("novalidate", true);
 
+document.addEventListener(
+  "blur",
+  (event) => {
+    const error = hasError(event.target);
+    if (error) {
+      showError(event.target, error);
+      return;
+    }
+
+    removeError(event.target);
+  },
+  true
+);
+
 const hasError = (field) => {
-  console.log(field.validity);
   if (field.validity.valid) return;
   if (field.validity.valueMissing) {
     return `${field.placeholder} cannot be empty`;
@@ -29,11 +42,7 @@ const showError = (field, error) => {
   errorText.innerHTML = error;
 };
 
-document.addEventListener(
-  "blur",
-  (event) => {
-    const error = hasError(event.target);
-    if (error) showError(event.target, error);
-  },
-  true
-);
+const removeError = (field) => {
+  const parentFormField = field.parentElement;
+  parentFormField.classList.remove("error");
+};
