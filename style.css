@@ -5,10 +5,24 @@ body {
 }
 
 /* LAYOUT */
+:root {
+  --corner-radius: 10px;
+}
+
+body {
+  padding: 25px;
+}
+
+.call-to-action {
+  background-color: blue;
+  padding: 1em;
+  border-radius: var(--corner-radius);
+}
 
 form {
   display: flex;
   flex-direction: column;
+  border-radius: var(--corner-radius);
 }
 
 /* COLOUR */
@@ -21,7 +35,11 @@ body {
   background-image: url(images/bg-intro-mobile.png);
 }
 
-@media screen and (min-width: 400px) {
+form {
+  background-color: white;
+}
+
+@media screen and (min-width: 450px) {
   body {
     background-image: url(images/bg-intro-desktop.png);
   }
