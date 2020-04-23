@@ -1,5 +1,5 @@
-//show icon on blur
 //remove message when error fixed
+//accessibility
 //prevent submission if form invalid
 
 const form = document.querySelector("form");
