@@ -173,7 +173,14 @@ label {
   margin-bottom: 2rem;
 }
 
+.form-field:not(.error) .error-icon {
+  display: none;
+  visibility: hidden;
+}
+
 .form-field.error .error-icon {
+  display: block;
+  visibility: visible;
   position: absolute;
   top: 0.8rem;
   right: 1rem;
