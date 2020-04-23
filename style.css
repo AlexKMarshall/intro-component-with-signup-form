@@ -8,6 +8,7 @@
   --greyish-blue: hsl(246, 25%, 77%);
   --green: hsl(154, 59%, 51%);
   --green-shadow: hsl(154, 59%, 46%);
+  --green-highlight: hsl(154, 65%, 68%);
 }
 
 /* TYPOGRAPHY */
@@ -146,6 +147,12 @@ form {
 
 .call-to-action.secondary {
   box-shadow: 0px 5px var(--green-shadow);
+  transition: background-color 300ms;
+}
+
+.call-to-action.secondary:hover,
+.call-to-action.secondary:focus {
+  background-color: var(--green-highlight);
 }
 
 /* FORM BEHAVIOUR */
