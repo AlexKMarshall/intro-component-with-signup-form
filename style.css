@@ -70,6 +70,7 @@ form {
   flex-direction: column;
   border-radius: var(--corner-radius);
   padding: 25px;
+  margin-bottom: 2rem;
 }
 
 input {
