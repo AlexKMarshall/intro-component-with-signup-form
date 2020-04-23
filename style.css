@@ -40,6 +40,12 @@ form {
   display: flex;
   flex-direction: column;
   border-radius: var(--corner-radius);
+  padding: 25px;
+}
+
+input {
+  display: block;
+  width: 100%;
 }
 
 /* COLOUR */
@@ -47,6 +53,9 @@ form {
   --red: hsl(0, 100%, 74%);
   --blue: hsl(248, 32%, 49%);
   --blue-shadow: hsla(248, 22%, 30%, 40%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --greyish-blue: hsl(246, 25%, 77%);
+  --green: hsl(154, 59%, 51%);
 }
 
 body {
