@@ -48,13 +48,23 @@ small a {
 }
 
 body {
-  padding: 25px;
 }
 
 .container {
   max-width: 650px;
   min-width: 300px;
+  min-height: 100vh;
+  padding: 25px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
 }
 
 h1 {
