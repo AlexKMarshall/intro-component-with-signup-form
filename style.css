@@ -30,6 +30,17 @@ h1 {
   letter-spacing: 0.02em;
 }
 
+small {
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+small a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
 /* LAYOUT */
 :root {
   --corner-radius: 10px;
@@ -73,6 +84,10 @@ form .call-to-action {
   margin-top: 0;
 }
 
+small {
+  margin: 0 1em;
+}
+
 /* COLOUR */
 
 body {
@@ -109,6 +124,10 @@ input {
 .secondary {
   background-color: var(--green);
   color: white;
+}
+
+small a {
+  color: var(--red);
 }
 
 /* DECORATION */
