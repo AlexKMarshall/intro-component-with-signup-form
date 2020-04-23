@@ -82,6 +82,7 @@ form {
 
 .form-field {
   position: relative;
+  margin-bottom: 1rem;
 }
 
 input {
@@ -89,7 +90,6 @@ input {
   width: 100%;
   border-radius: var(--corner-radius);
   padding: 1em;
-  margin-bottom: 1rem;
 }
 
 form .call-to-action {
@@ -170,12 +170,24 @@ label {
 .form-field.error input {
   border-color: var(--red);
   border-width: 2px;
-  margin-bottom: 2rem;
 }
 
-.form-field:not(.error) .error-icon {
+.form-field:not(.error) .error-icon,
+.form-field:not(.error) .error-text {
   display: none;
   visibility: hidden;
+}
+
+.form-field.error .error-text {
+  display: block;
+  visibility: visible;
+  text-align: right;
+  font-size: 0.625rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--red);
+  margin-top: 1em;
+  padding-right: 2px; /* this offsets the italic style pushing the text outside the box */
 }
 
 .form-field.error .error-icon {
