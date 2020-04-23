@@ -18,6 +18,14 @@ const hasError = (field) => {
 const showError = (field, error) => {
   const parentFormField = field.parentElement;
   parentFormField.classList.add("error");
+
+  let errorText = parentFormField.querySelector(".error-text");
+  if (!errorText) {
+    errorText = document.createElement("div");
+    errorText.className = "error-text";
+    parentFormField.appendChild(errorText);
+  }
+  errorText.innerHTML = error;
 };
 
 document.addEventListener(
