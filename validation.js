@@ -1,7 +1,4 @@
-//show border on blur
 //show icon on blur
-//show message on blur
-//show correct message
 //remove message when error fixed
 //prevent submission if form invalid
 
@@ -9,9 +6,13 @@ const form = document.querySelector("form");
 form.setAttribute("novalidate", true);
 
 const hasError = (field) => {
+  console.log(field.validity);
   if (field.validity.valid) return;
   if (field.validity.valueMissing) {
     return `${field.placeholder} cannot be empty`;
+  }
+  if (field.validity.patternMismatch) {
+    return `Looks like this is not an email`;
   }
 };
 
