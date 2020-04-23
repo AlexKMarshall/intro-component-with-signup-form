@@ -1,5 +1,15 @@
-/* TYPOGRAPHY */
+/* VARIABLES */
+:root {
+  --red: hsl(0, 100%, 74%);
+  --blue: hsl(248, 32%, 49%);
+  --blue-shadow: hsla(248, 22%, 30%, 40%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --medium-grey: hsl(249, 2%, 41%);
+  --greyish-blue: hsl(246, 25%, 77%);
+  --green: hsl(154, 59%, 51%);
+}
 
+/* TYPOGRAPHY */
 body {
   font-family: Poppins, sans-serif;
   font-size: 16px;
@@ -46,17 +56,16 @@ form {
 input {
   display: block;
   width: 100%;
+  border-radius: var(--corner-radius);
+  padding: 1em;
+  margin-bottom: 1rem;
+}
+
+form .call-to-action {
+  margin-top: 0;
 }
 
 /* COLOUR */
-:root {
-  --red: hsl(0, 100%, 74%);
-  --blue: hsl(248, 32%, 49%);
-  --blue-shadow: hsla(248, 22%, 30%, 40%);
-  --dark-blue: hsl(249, 10%, 26%);
-  --greyish-blue: hsl(246, 25%, 77%);
-  --green: hsl(154, 59%, 51%);
-}
 
 body {
   background-color: var(--red);
@@ -72,7 +81,17 @@ body {
 
 form {
   background-color: white;
-  color: black;
+  color: var(--medium-grey);
+}
+
+input {
+  border: 1px solid var(--greyish-blue);
+  color: inherit;
+  font-weight: 600;
+}
+
+::placeholder {
+  color: inherit;
 }
 
 .primary {
@@ -83,4 +102,11 @@ form {
 
 .call-to-action.primary {
   box-shadow: 0px 10px var(--blue-shadow);
+}
+
+/* FORM BEHAVIOUR */
+
+label {
+  display: none;
+  visibility: hidden;
 }
