@@ -1,5 +1,3 @@
-//remove message when error fixed
-//accessibility
 //prevent submission if form invalid
 
 const form = document.querySelector("form");
@@ -33,16 +31,33 @@ const showError = (field, error) => {
   const parentFormField = field.parentElement;
   parentFormField.classList.add("error");
 
-  let errorText = parentFormField.querySelector(".error-text");
-  if (!errorText) {
-    errorText = document.createElement("div");
-    errorText.className = "error-text";
-    parentFormField.appendChild(errorText);
+  const fieldId = field.id || field.name;
+  const errorId = `error-for-${fieldId}`;
+
+  let errorMessage = parentFormField.querySelector(`#${errorId}`);
+  if (!errorMessage) {
+    errorMessage = document.createElement("div");
+    errorMessage.id = errorId;
+    errorMessage.className = "error-text";
+    parentFormField.appendChild(errorMessage);
   }
-  errorText.innerHTML = error;
+  errorMessage.innerHTML = error;
+
+  field.setAttribute("aria-describedby", errorId);
 };
 
 const removeError = (field) => {
   const parentFormField = field.parentElement;
   parentFormField.classList.remove("error");
+
+  field.removeAttribute("aria-describedby");
+
+  const fieldId = field.id || field.name;
+  const errorId = `error-for-${fieldId}`;
+
+  const errorMessage = parentFormField.querySelector(`#${errorId}`);
+
+  if (!errorMessage) return;
+
+  errorMessage.innerHTML = "";
 };
