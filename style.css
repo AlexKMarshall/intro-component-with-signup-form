@@ -23,6 +23,12 @@ h1 {
   line-height: 1.25em;
 }
 
+.call-to-action.secondary {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
 /* LAYOUT */
 :root {
   --corner-radius: 10px;
@@ -42,6 +48,7 @@ p {
 
 .call-to-action {
   padding: 1.5em 3em;
+  border: none;
   border-radius: var(--corner-radius);
   margin: 25px 0;
 }
@@ -96,6 +103,11 @@ input {
 
 .primary {
   background-color: var(--blue);
+}
+
+.secondary {
+  background-color: var(--green);
+  color: white;
 }
 
 /* DECORATION */
