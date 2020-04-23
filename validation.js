@@ -1,5 +1,3 @@
-//prevent submission if form invalid
-
 const form = document.querySelector("form");
 form.setAttribute("novalidate", true);
 
