@@ -50,6 +50,12 @@ body {
   padding: 25px;
 }
 
+.container {
+  max-width: 650px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
 h1 {
   margin-bottom: 35px;
 }
