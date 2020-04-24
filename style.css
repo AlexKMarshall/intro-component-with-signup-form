@@ -58,9 +58,6 @@ small a {
   --corner-radius: 10px;
 }
 
-body {
-}
-
 .container {
   max-width: 650px;
   min-width: 300px;
